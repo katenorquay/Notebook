@@ -1,11 +1,18 @@
 $dark_gray: #2B2E2E;
 $light_gray: #C0C1C1;
 $green: #33CD99;
+$blue: #00a3dc;
+$white: #FFFFFF;
 
 @mixin bold_font {
 	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+@mixin other_font {
+	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+	font-weight: bold;
 }
 
 * {
@@ -16,6 +23,7 @@ $green: #33CD99;
 body {
 	padding-top: 4.5rem;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+	background-color: $blue;
 }
 
 .wrapper {
@@ -24,9 +32,17 @@ body {
 }
 
 .wrapper_with_padding {
+	width: 65%;
+	margin: 5.5rem auto;
+	padding: 3.5rem 3.5rem;
+	background-color: $white;
+}
+
+.wrapper_with_padding_home {
 	width: 80%;
 	margin: 0 auto;
 	padding: 3.5rem 0;
+	background-color: $blue
 }
 
 .clearfix:before, .clearfix:after {
@@ -56,35 +72,37 @@ button, .button {
 }
 
 a {
-	color: $green;
+	color: $dark_gray;
 	text-decoration: none;
 	&:hover {
-		color: $dark_gray;
+		color: $green;
 	}
 }
 
 header {
-	background: $dark_gray;
+	background: $white;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	padding: 1.75rem 0;
-	border-bottom: 7px solid $green;
+	border-bottom: 7px solid $light_gray;
 	.header_inner {
 		width: 90%;
 		margin: 0 auto;
 		#logo {
 			display: inline-block;
-      width: 10rem;
+      width: 3.5rem;
 			float: left;
+			img {width: 100%}
 		}
 		nav {
 			float: right;
+			display: inline-block;
 			a {
 				text-decoration: none;
-				color: white;
+				color: $dark_gray;
 				font-size: 1.1rem;
-				line-height: 1.5;
+				line-height: 2.7;
 				margin-left: 1rem;
 				&:hover {
 					color: $green;

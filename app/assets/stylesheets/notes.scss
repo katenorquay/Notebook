@@ -1,6 +1,6 @@
 #notes {
 	.note {
-		background: $dark_gray;
+		background: $white;
 		width: 30%;
 		min-height: 150px;
 		margin: 1rem 1%;
@@ -8,9 +8,10 @@
 		float: left;
 		border-radius: .4rem;
 		position: relative;
+		border: 1px solid $light_gray;
 		.title {
-			@include bold_font;
-			color: white;
+			@include other_font;
+			color: $dark_gray;
 			margin: 0;
 			letter-spacing: 1px;
 		}
@@ -18,7 +19,7 @@
 			position: absolute;
 			bottom: .25rem;
 			left: 8.5%;
-			color: $green;
+			color: $dark_gray;
 			font-size: .85rem;
 		}
 	}
@@ -26,7 +27,7 @@
 
 #note_show {
 	.title {
-		@include bold_font;
+		@include other_font;
 		font-size: 2.5rem;
 		margin-bottom: 1.25rem;
 		padding-bottom: 1rem;
@@ -42,10 +43,14 @@
 			padding: .5rem 2rem;
 			border-radius: 2rem;
 			text-decoration: none;
-			color: $green;
-			border: 5px solid #E9E9E9;
+			color: $dark_gray;
+			border: 5px solid $light_gray;
 			@include bold_font;
-			background: transparent;
+			background: $white;
 		}
 	}
+}
+
+#notes_edit {
+
 }
