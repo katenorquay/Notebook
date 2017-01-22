@@ -1,18 +1,21 @@
-$dark_gray: #2B2E2E;
+$dark_gray: #333;
 $light_gray: #C0C1C1;
-$green: #33CD99;
+$green: #59ffab;
 $blue: #00a3dc;
 $white: #FFFFFF;
+$dark_green: #00b359;
 
 @mixin bold_font {
 	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+	color: $dark_gray
 }
 
 @mixin other_font {
 	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
 	font-weight: bold;
+	color: $dark_gray
 }
 
 * {
@@ -23,18 +26,21 @@ $white: #FFFFFF;
 body {
 	padding-top: 4.5rem;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-	background-color: $blue;
+	background-image: url('pencil.jpg');
+	background-size: 200px;
 }
 
 .wrapper {
 	width: 80%;
-	margin: 0 auto;
+	margin: 20px auto;
+	background-color: white;
+	padding: 30px;
 }
 
 .wrapper_with_padding {
 	width: 65%;
 	margin: 5.5rem auto;
-	padding: 3.5rem 3.5rem;
+	padding: 3rem 3.5rem;
 	background-color: $white;
 }
 
@@ -42,7 +48,7 @@ body {
 	width: 80%;
 	margin: 0 auto;
 	padding: 3.5rem 0;
-	background-color: $blue
+	background: transparent;
 }
 
 .clearfix:before, .clearfix:after {
@@ -55,59 +61,57 @@ body {
 }
 
 button, .button {
-	border: none;
-	outline: none;
-	background: $green;
-	padding: 1rem 3.5rem;
+	padding: .5rem 1.5rem;
 	border-radius: 2rem;
-	a {
+	text-decoration: none;
+	color: $dark_gray;
+	border: 5px solid $green;
+	@include bold_font;
+	background: $green;
+	display: inline-block;
+	margin: .3rem;
+	&:hover {
 		color: white;
-		text-decoration: none;
 	}
 }
 
-.button {
-	color: white;
-	margin: 2rem 0;
-}
-
-a {
-	color: $dark_gray;
+.header-button {
+	padding: 0 1.5rem;
+	border-radius: 2rem;
 	text-decoration: none;
+	color: $dark_gray;
+	border: 5px solid $green;
+	font-size: 1.1rem;
+	line-height: 2.4;
+	margin-top: 10px;
+	margin-left: 1rem;
+	@include bold_font;
+	background: $green;
+	display: inline-block;
 	&:hover {
-		color: $green;
+		color: white;
 	}
 }
 
 header {
-	background: $white;
+	background: $dark_gray;
 	position: fixed;
 	top: 0;
 	width: 100%;
-	padding: 1.75rem 0;
-	border-bottom: 7px solid $light_gray;
+	padding: 1.4rem 0;
+	border-bottom: 7px solid #000;
 	.header_inner {
 		width: 90%;
 		margin: 0 auto;
 		#logo {
 			display: inline-block;
-      width: 3.5rem;
+      width: 4rem;
 			float: left;
 			img {width: 100%}
 		}
 		nav {
 			float: right;
 			display: inline-block;
-			a {
-				text-decoration: none;
-				color: $dark_gray;
-				font-size: 1.1rem;
-				line-height: 2.7;
-				margin-left: 1rem;
-				&:hover {
-					color: $green;
-				}
-			}
 		}
 	}
 }
@@ -116,18 +120,18 @@ footer {
 	background: $dark_gray;
 	width: 100%;
 	padding: 2rem 0;
-	color: white;
 	text-align: center;
 	@include bold_font;
 	p {
 		margin: 0;
-		font-size: .85rem;
+		font-size: 1.1rem;
+		color: $green;
 	}
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
-	margin-bottom: 1rem;
+	margin: 1rem 0;
 	border: 1px solid $light_gray;
 	border-radius: .4rem;
 }

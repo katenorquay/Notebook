@@ -8,7 +8,7 @@
 		float: left;
 		border-radius: .4rem;
 		position: relative;
-		border: 1px solid $light_gray;
+		border: 2px solid $light_gray;
 		.title {
 			@include other_font;
 			color: $dark_gray;
@@ -39,18 +39,5 @@
 	}
 	.buttons {
 		margin-top: 3rem;
-		a.button {
-			padding: .5rem 2rem;
-			border-radius: 2rem;
-			text-decoration: none;
-			color: $dark_gray;
-			border: 5px solid $light_gray;
-			@include bold_font;
-			background: $white;
-		}
 	}
-}
-
-#notes_edit {
-
 }
